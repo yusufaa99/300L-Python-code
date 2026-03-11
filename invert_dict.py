@@ -28,6 +28,14 @@ print(invert_dict(items))
 
 # from structshape import structshape
 
-data = [[1,2], [3,4], [5,6]]
 
+data = [
+    [1,2],
+    [3,4],
+    [5,6]
+]
+
+a = 7
+b = 26
+print(divmod(a,b))
 print(structshape(data))

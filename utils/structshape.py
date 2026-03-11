@@ -25,6 +25,7 @@ def structshape(ds):
 
     Returns: string
     """
+    __all__ = ["structshape"]
     typename = type(ds).__name__
 
     # handle sequences
