@@ -117,3 +117,10 @@ val = value_count(text1).values()
 keys = value_count(text1).keys()
 print(val, keys)
 
+newnames = {}
+names = {'class1': ['musa', 'sani', 'garba', 'hadi', 'jafar'], 'class2':['garba', 'hadi', 'jafar'], 'class3':['muhammmad']}
+for i,j in names.items():
+    if len(names[i]) > 1:
+        newnames.setdefault(i, []).append(j)
+
+print(newnames)
