@@ -124,3 +124,10 @@ for i,j in names.items():
         newnames.setdefault(i, []).append(j)
 
 print(newnames)
+
+
+stud =['musa', 'sani', 'garba', 'hadi', 'jafar','muhammmad']
+
+for i in range(len(stud)):
+    for j in range(i+1, len(stud)):
+        print(i,stud[i], j,stud[j])

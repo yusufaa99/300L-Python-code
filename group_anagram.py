@@ -18,7 +18,7 @@ def group_anagram(word_lists):
     # this is implemented because i wand to see a list of anagram with more than one items
     for i,j in anagrams.items():
         if len(anagrams[i]) != 1:
-            # using if-lese block which gives me what i am expecting.
+            # using if-else block which gives me what i am expecting.
             if i not in newanagram:
                 newanagram[i] = j
             else:
