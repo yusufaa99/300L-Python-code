@@ -9,11 +9,10 @@ def group_anagram(word_lists):
     key = ''
     for word in word_lists:
         key = ''.join(sorted(word))
-        if  key == ''.join(sorted(word)):
-            if key not in anagrams:
-                anagrams[key] = [word]
-            else:
-                anagrams[key].append(word)
+        if key not in anagrams:
+            anagrams[key] = [word]
+        else:
+            anagrams[key].append(word)
                 
     # this is implemented because i wand to see a list of anagram with more than one items
     for i,j in anagrams.items():
@@ -23,7 +22,7 @@ def group_anagram(word_lists):
                 newanagram[i] = j
             else:
                 newanagram[i].append(j)
-
+    
             # using setdefauld method but it creating addition list to the required list
             # newanagram.setdefault(i, []).append(j)
     return newanagram
@@ -31,11 +30,15 @@ def group_anagram(word_lists):
 # improve version of the solution using inbuild method "setdefault"
 def group_anagram2(word_lists):
     anagrams = {}
-    
+    newanagrams = {}
     for word in word_lists:
         key = ''.join(sorted(word))
         anagrams.setdefault(key, []).append(word)
 
-    return anagrams
+    for key, group in anagrams.items():
+        if len(group) > 1:
+            newanagrams[key] = group
+
+    return newanagrams
 
 print(group_anagram(words_list1))
