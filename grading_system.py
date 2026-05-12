@@ -34,6 +34,7 @@ def grading(inputs):
     # # elif score < 0:
     # #     print("Scores can not be less than 0")
     # else:
+
     if score >= 70:
           print(f"{score}: A")
     elif score >= 60:

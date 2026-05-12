@@ -24,15 +24,18 @@ print(sorted(unique_words, key = len)[-5:])
 
 # debug the following code, its not working as expected
 reg_no = ['u24co2023', 'u23cv1098', 'u23me2021', 'u25co1001', 'u23mc1021', 'u21ee1011', 'u20ee1027', 'u21co2017']
+reg_no_co = []
+reg = ['co', 'cv', 'ee', 'me', 'mc', 'am', 'cm']
 order_reg_no = []
+
+reg_no_dic = {}
+
+#  a simple program that filter reg numbers which belong to co and which does not.
 for reg in reg_no:
-    print(reg)
     if 'co' not in reg:
         order_reg_no.append(reg)
-        reg_no.remove(reg)
+    else:
+        reg_no_co.append(reg)
 
-print('CO', reg_no)
-print('NON CO', order_reg_no)
-
-for i in range(len(reg_no)):
-    print(reg_no[i])
+# print('CO', reg_no_co)
+# print('NON CO', order_reg_no)
